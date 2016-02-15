@@ -14,40 +14,70 @@
 #Divide file in smaller text files and cleaning / selecting relevant data
 
 rm(list = ls())
+
 conn=file("//HCVHOST01/data/Data DMA/helcom-log-2010.csv", open="r")
+
 #read the first 1 000 000 rows:
+
 data<-read.csv(conn, nrows=1000000, head=T, fill=T,na.strings=c(""," ", "null", "NA"))
+
 #add column name to the first file
+
 colnames(data)<-c( "timestamp_pretty","timestamp","targetType","mmsi","msgid","posacc","lat","long","sog","cog","draught","name","dimBow",
                    "dimPort","dimStarboard","dimStern","shipTypeCargoTypeCode","shipType","shipCargo","destination","eta","imo","callsign")
+                   
 i=1
+
 while (length(data)>0) {
+
   #unique name file for each divisions:
+  
   fn=paste("E:/test_division/division_finale2010/division_ais_2010.", i,sep=",", ".csv" )
+  
   out_con=file(fn, open="w")
+  
   #Remove the double quote sign for the divisions
+  
   data$name <-  gsub("\"","",data$name)  
+  
   data$destination <-  gsub("\"","",data$destination) 
+  
   data$callsign <-  gsub("\"","",data$callsign) 
+  
   data$msgid <-  gsub("\"","",data$msgid )
+  
   data$targetType <-  gsub("\"","",data$targetType ) 
+  
   data$mmsi <-  gsub("\"","",data$mmsi ) 
+  
   data$lat <-  gsub("\"","",data$lat )
+  
   data$long <-  gsub("\"","",data$long )
+  
   data$sog <-  gsub("\"","",data$sog )
+  
   data$cog <-  gsub("\"","",data$cog )
+  
   data$shipType <-  gsub("\"","",data$shipType )
+  
   data$dimBow <-  gsub("\"","",data$dimBow )
+  
   data$draught <-  gsub("\"","",data$draught )
+  
   data$dimPort <-  gsub("\"","",data$dimPort )
+  
   data$dimStarboard <-  gsub("\"","",data$dimStarboard )
+  
   data$dimStern <-  gsub("\"","",data$dimStern )
+  
   data$imo <-  gsub("\"","",data$imo )
   
   #cleaning AIS data begins here
   
   #remove signals that are not from 2010
+  
   data$year <- substr(data$timestamp_pretty,7,10) 
+  
   data<-subset(data,data$year==2010)
   
   #remove duplication

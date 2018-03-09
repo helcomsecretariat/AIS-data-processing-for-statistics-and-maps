@@ -1,8 +1,8 @@
 #-------------------------------------------------------------
 # Name:             Track Builder From CSV
-# Purpose:			Creates lines features from the monthly csv files
+# Purpose:	    Creates lines features from the monthly csv files
 # Author:           Andzej Milos
-# Created:			2017
+# Created:	    2017
 # Copyright:        GNU General Public License V3
 # ArcGIS Version:   10.2
 # Python Version:   2.7

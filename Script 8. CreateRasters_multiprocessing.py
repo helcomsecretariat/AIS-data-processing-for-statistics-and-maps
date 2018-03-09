@@ -1,6 +1,6 @@
 #-------------------------------------------------------------
 # Name:             Create rasters in multiprocessing
-# Purpose:			Creates a raster file for each ship type category
+# Purpose:	    Creates a raster file for each ship type category
 # Authors:          Manuel Frias, Andzej Milos
 # Copyright:        GNU General Public License V3
 # ArcGIS Version:   10.2
@@ -121,30 +121,4 @@ if __name__ == '__main__':
 		pool.join()
 
 	print "Ended at: " + str(datetime.now()) + ".\nDuration: " + str(datetime.now() - startTime_script) + "\n"
-
-		#Join all rasters into one
-		#rasterList = arcpy.ListRasters("*_Raster.tif")
-		#arcpy.CheckOutExtension("Spatial")
-
-		#print "Joining and summing up values of all months into one..."
-		#sumRasters = arcpy.sa.CellStatistics(rasterList, "SUM", "NODATA")
-		#sumRasters.save(os.path.join(env, yearRaster))
-		#print "Yearly raster file done!\n"
-
-		#Clip Baltic Scope area
-		#print "Clipping Baltic Scope area and creating new raster..."
-		#areaClip = arcpy.Clip_management(yearRaster, "", yearRaster+"_Scope.tif", clippingArea, "", "ClippingGeometry")
-		#print "Baltic Scope clipping done!\n"
-
-
-
-		#Delete IMO files to save space in disk
-		#print "Deleting IMO files in "+env+" to save space..."
-		#for IMOFiles in checkIMOFiles:
-		#	print(clearWSLocks(env))
-		#	arcpy.Delete_management(IMOFiles)
-
-		#Print end time
-		#print "Script ended! Time now: " +str(datetime.now())
-		#print "Finished in "+str(datetime.now() - startTime)
 

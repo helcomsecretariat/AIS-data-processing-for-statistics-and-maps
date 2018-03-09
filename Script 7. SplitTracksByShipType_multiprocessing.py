@@ -1,8 +1,8 @@
 #-------------------------------------------------------------
 # Name:             Split tracks by ship type
-# Purpose:			Split lines features into different ship type categories
+# Purpose:	    Split lines features into different ship type categories
 # Authors:          Manuel Frias, Andzej Milos
-# Created:			2017
+# Created:	    2017
 # Copyright:        GNU General Public License V3
 # ArcGIS Version:   10.2
 # Python Version:   2.7

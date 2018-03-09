@@ -18,6 +18,6 @@ The scripts available are:
 
 - Script 8. CreateRasters_multiprocessing.py: It creates a raster file for each ship type in multiprocessing. It assumes that there is a folder with the line shapefiles for each ship type; a folder 04_rasters and a grid Grid1km_BalticSea.shp with the 1x1 km INSPIRE compliant grid.
 
-The underlying AIS data processing work has been co-financed by EU projects Baltic Scope (2015-2017 EASME/EMFF/2014/1.2.1.5) and Baltic Lines (2016-2019, Interreg Baltic Sea Region). For more information, please check the HELCOM Maritime Assessment on Maritime Activities published in 2018 at  ... . The methodology is available in the annexes.
+The underlying AIS data processing work has been co-financed by EU projects Baltic Scope (2015-2017 EASME/EMFF/2014/1.2.1.5) and Baltic Lines (2016-2019, Interreg Baltic Sea Region). For more information, please check the HELCOM Maritime Assessment on Maritime Activities published in 2018 at http://www.helcom.fi/Lists/Publications/BSEP152.pdf. The methodology is available in the annexes.
 
 License: GNU General Public License V3

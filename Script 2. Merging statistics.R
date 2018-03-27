@@ -1,4 +1,9 @@
-##### Script 4
+##### Script 2
+# Developped by Florent NICOLAS, HELCOM Secretariat - 2017
+# R Version 3.4.3
+
+
+
 ##Merging descriptive statistics  for the year 2013
 ##For another year, replace 2013 by the year wanted
 
